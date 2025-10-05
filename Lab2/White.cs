@@ -1,90 +1,109 @@
-﻿namespace Lab2
+namespace Lab2
 {
     public class White
     {
         const double E = 0.0001;
+
         public int Task1(int n)
         {
-            int answer = 0;
-
+            int sum = 0;
             // code here
-
+            for (int i = 1; i <= n; i++)
+            {
+                sum += 3 * i - 1;
+            }
             // end
-
-            return answer;
+            return sum;
         }
+
         public double Task2(int n)
         {
-            double answer = 0;
-
+            double sum = 0;
             // code here
-
+            for (int i = 1; i <= n; i++)
+            {
+                sum += 1.0 / i;
+            }
             // end
-
-            return answer;
+            return sum;
         }
+
         public long Task3(int n)
         {
-            long answer = 0;
-
+            if (n == 0) return 1;
+            long fact = 1;
             // code here
-
+            for (int i = 1; i <= n; i++)
+            {
+                fact *= i;
+            }
             // end
-
-            return answer;
+            return fact;
         }
+
         public long Task4(int a, int b)
         {
-            long answer = 0;
-
+            if (b == 0) return 1;
+            if (a == 0) return 0;
+            long res = 1;
             // code here
-
+            for (int i = 0; i < b; i++)
+            {
+                res *= a;
+            }
             // end
-
-            return answer;
+            return res;
         }
+
         public int Task5(int L)
         {
-            int answer = 0;
-
+            long prod = 1;
+            int n = 1;
             // code here
-
+            while (prod <= L)
+            {
+                prod *= n;
+                n += 3;
+            }
             // end
-
-            return answer;
+            return n - 3;
         }
+
         public double Task6(double x)
         {
-            double answer = 0;
-
+            double sum = 1.0;
+            double term = x * x;
             // code here
-
+            while (term > E)
+            {
+                sum += term;
+                term *= x * x;
+            }
             // end
-
-            return answer;
+            return sum;
         }
 
         public int Task7(int n)
         {
-            int answer = 0;
-
+            int sum = 0;
+            int k = 0;
             // code here
-
+            while (sum < n)
+            {
+                sum += k;
+                k++;
+            }
             // end
-
-            return answer;
+            return k - 1;
         }
+
         public int Task8(double L, double v)
         {
-            int answer = 0;
-            const double R = 6371.0; // радиус Земли, км
-
+            int res;
             // code here
-
+            res = (int)(L / v + 0.5);
             // end
-
-            return answer;
+            return res;
         }
     }
-
 }
