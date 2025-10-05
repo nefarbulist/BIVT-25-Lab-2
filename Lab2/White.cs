@@ -1,4 +1,4 @@
-﻿namespace Lab2
+namespace Lab2
 {
     public class White
     {
@@ -6,85 +6,96 @@
         public int Task1(int n)
         {
             int answer = 0;
-
             // code here
-
+            for (int i = 1; i<= n; i++)
+            {
+                answer += 3 * i - 1;
+            }
             // end
-
             return answer;
         }
         public double Task2(int n)
         {
             double answer = 0;
-
             // code here
-
+            for (int i = 1; i <= n; i++)
+            {
+                answer += 1.0 / i;
+            }
             // end
-
             return answer;
         }
         public long Task3(int n)
         {
-            long answer = 0;
-
+            long answer = 1;
             // code here
-
+            for (int i = 1; i<=n;  i++)
+            {
+                answer *= i;
+            }
             // end
-
             return answer;
         }
         public long Task4(int a, int b)
         {
-            long answer = 0;
-
+            long answer = 1;
             // code here
-
+            for (int i=0; i<b;i++)
+            {
+                answer *=a;
+            }
             // end
-
             return answer;
         }
         public int Task5(int L)
         {
             int answer = 0;
-
             // code here
-
+            long p = 1;
+            int n = 1;
+            int p = 1;
+            int a = 1;
+            while (p <= L)
+            {
+                p *= n;
+                n += 3;
+                p = p * a;
+                a = a + 3;
+            }
+            answer = n - 3;
+            answer = a - 3;
             // end
 
             return answer;
-        }
-        public double Task6(double x)
-        {
-            double answer = 0;
-
-            // code here
-
-            // end
-
-            return answer;
-        }
-
-        public int Task7(int n)
-        {
+@@ -100,8 +100,7 @@ public int Task7(int n)
             int answer = 0;
-
             // code here
-
+            int sum = 0;
+            answer = 0;
+            while (sum <= n)
+            while (sum < n)
+            {
+                answer++;
+                sum += answer;
+            }
             // end
-
             return answer;
         }
         public int Task8(double L, double v)
         {
             int answer = 0;
             const double R = 6371.0; // радиус Земли, км
-
             // code here
-
+            double h = 0;
+            double g = 0;
+            while (g < L)
+            {
+                answer ++;
+                h = v * answer;
+                g = Math.Sqrt(2*R*h+h*h);
+            }
             // end
-
             return answer;
         }
     }
-
-}
+    }
